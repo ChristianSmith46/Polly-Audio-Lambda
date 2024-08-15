@@ -38,15 +38,5 @@ npm install
 aws configure
 ```
 
-4. Deploy the Lambda function:
-
-```bash
-sls deploy
-```
-
-5. Invoke the Lambda function with the desired SSML text:
-
-```bash
-sls invoke -f generateAudio --data '{"ssml": "<speak>Hello, world!</speak>"}'
-```
+4. Test with debug.js using npm run debug or node debug.js
 
