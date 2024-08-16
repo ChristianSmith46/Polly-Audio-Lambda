@@ -4,7 +4,6 @@ const pollyClient = new PollyClient({ region: process.env.AWS_REGION });
 
 module.exports.generatePollyAudio = async (uuid, ssml) => {
     const params = {
-        OutputS3KeyPrefix: uuid,
         Engine: "neural",
         LanguageCode: "en-US",
         OutputFormat: "mp3",
