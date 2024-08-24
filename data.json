@@ -1,4 +1,6 @@
 {
-    "uuid": "testUUID",
-    "ssml": "<speak>hello world</speak>"
+    "correlationId": "test-correlation123",
+    "title": "AITA for not wanting to go to my AITA friend's wedding?",
+    "script": "hello world this is a test",
+    "voice": "Joanna"
 }

@@ -2,7 +2,7 @@ const { PollyClient, StartSpeechSynthesisTaskCommand } = require("@aws-sdk/clien
 
 const pollyClient = new PollyClient({ region: process.env.AWS_REGION });
 
-module.exports.generatePollyAudio = async (uuid, ssml) => {
+module.exports.generatePollyAudio = async (uuid, ssml, voice) => {
     const params = {
         Engine: "neural",
         LanguageCode: "en-US",
@@ -10,7 +10,7 @@ module.exports.generatePollyAudio = async (uuid, ssml) => {
         OutputS3BucketName: process.env.TIKTOK_BUCKET_NAME,
         TextType: "ssml",
         Text: ssml,
-        VoiceId: "Matthew",
+        VoiceId: voice,
     };
     console.log('Calling polly service', uuid);
     const command = new StartSpeechSynthesisTaskCommand(params);
